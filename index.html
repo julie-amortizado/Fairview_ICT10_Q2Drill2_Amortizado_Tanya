@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <link rel="icon" href="Hogwarts Logo.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.3.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2025.3.1/core.js"></script>
+
+    <title>School Application Checker</title>
+</head>
+<style>
+
+* {
+    box-sizing: border-box;
+    font-family: 'Gill Sans', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background-image: url('https://i.pinimg.com/originals/39/aa/2f/39aa2fc82bbd15bec8cf9cc88e675ea4.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+form {
+    width: 480px;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.55);
+    box-shadow: 1px 1px 3px 3px rgba(121, 90, 59, 0.471);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+
+.header {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.header h1 {
+    margin: 4px 0;
+}
+
+.header img {
+    width: 70px;
+}
+
+.header p {
+    font-size: 15px;
+    line-height: 18px;
+    padding: 0 25px;
+    margin: 4px 0;
+}
+
+.inputs {
+    padding: 10px 25px;
+}
+
+input[type="text"] {
+    color: white;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 10px 0;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 1.3px solid rgb(165, 165, 165);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.41);
+    outline: none;
+}
+
+::placeholder {
+    color: rgba(255, 255, 255, 0.618);
+}
+
+.footer {
+    text-align: center;
+    padding: 0 25px;
+}
+
+.footer button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    background: linear-gradient(#5e4f43, #a49270);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.result {
+    width: 450px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.65);
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+
+footer {
+    width: 100%;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.677);
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    letter-spacing: 1px;
+}
+
+
+</style>
+
+<body>
+
+    <div class="container">
+
+        <div class="card">
+
+            <form>
+
+                <div class="header">
+                    <h1>Add new club member</h1>
+                    <p>Type name to add as new club member.</p>
+                </div>
+
+                <div class="inputs">
+                    <label for="firstname">First Name</label><br>
+                    <input type="text" id="firstname" placeholder="Enter Here"><br>
+
+                    <label for="lastname">Last Name</label><br>
+                    <input type="text" id="lastname" placeholder="Enter Here"><br>
+                </div>
+
+                <div class="footer">
+                    <button type="button" id="loginBTN" py-click="verify">Enter</button>
+                </div>
+            </form>
+
+            <div id="result" class="result">
+                <h1>List of members:</h1>
+                <h3>Grade 7</h3>
+                <p>Sabine Agacita</p>
+                <p>Dylan Alip</p>
+                <p>Ramone Betilez</p>
+
+                <h3>Grade 8</h3>
+                <p>Atrisha Cañedo</p>
+                <p>Lance Catu</p>
+                <p>Maria Coronel</p>
+
+                <h3>Grade 9</h3>
+                <p>Annika De Vera</p>
+                <p>Amanda Gadia</p>
+                <p>Maiselle Marin</p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script type="py" src="main.py"></script>
+
+</body>
+
+</html>
